@@ -1,17 +1,20 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
+      <div className="App">        
           <h1>
-            Here will be the most epic game ever.
-          </h1>
-        </header>
+            {this.props.message}
+          </h1>        
       </div>
     );
   }
 }
+
+App.PropTypes = {
+  message: PropTypes.string,
+};
 
 export default App;
